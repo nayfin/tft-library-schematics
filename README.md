@@ -23,7 +23,7 @@ add it to your `angular.json`:
 ng config cli.defaultCollection akita-schematics
 ```
 
-The [collection schema](./schematics/collection.json) also has aliases to the most common schematics used to generate files.
+The [collection schema](https://github.com/datorama/akita-schematics/blob/master/src/collection.json) also has aliases to the most common schematics used to generate files.
 
 The `akita-schematics` extend the default `@schematics/angular` collection. If you want to set defaults for schematics such as generating components with scss file, you must change the schematics package name from `@schematics/angular` to `akita-schematics` in `angular.json`:
 
@@ -47,7 +47,7 @@ The defauls feature will output an entity feature, but you can also generate the
 ng g akita-schematics:feature todos/todos --plain
 ```
 
-> Note that `akita-schematics:store` is only needed when the default collection isn't set to `akita-schematics`
+> Note that the `akita-schematics:` prefix is only needed when the default collection isn't set to `akita-schematics`
 
 ## Generate a Store
 
