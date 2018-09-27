@@ -1,6 +1,6 @@
 {
   "name": "akita-schematics",
-  "version": "1.0.0-rc.3",
+  "version": "1.0.0-rc.4",
   "description": "Akita Schematics for Angular",
   "scripts": {
     "build": "tsc -p tsconfig.json",
@@ -19,13 +19,16 @@
   "schematics": "./src/collection.json",
   "homepage": "https://github.com/@datorama/akita/schematics#readme",
   "dependencies": {
-    "@angular-devkit/architect": "0.7.2",
-    "@angular-devkit/core": "0.7.2",
-    "@angular-devkit/schematics": "0.7.2",
-    "@types/jasmine": "^2.6.0",
+    "@angular-devkit/architect": "0.8.3",
+    "@angular-devkit/core": "0.8.3",
+    "@angular-devkit/schematics": "0.8.3",
+    "@types/jasmine": "^2.8.8",
     "@types/node": "^8.0.31",
     "jasmine": "^2.8.0",
-    "typescript": "2.9.2",
-    "pluralize": "^7.0.0"
+    "pluralize": "^7.0.0",
+    "typescript": "2.9.2"
+  },
+  "devDependencies": {
+    "@schematics/angular": "^0.8.3"
   }
 }

@@ -8,7 +8,9 @@ import {
   template,
   url,
   Tree,
-  SchematicContext
+  SchematicContext,
+  noop,
+  filter
 } from '@angular-devkit/schematics';
 
 import { getProjectPath, stringUtils, parseName } from '../utils';
@@ -22,6 +24,7 @@ export default function(options: any): Rule {
     options.path = parsedPath.path;
 
     const templateSource = apply(url('./files'), [
+      options.spec ? noop() : filter(path => !path.endsWith('.spec.ts')),
       template({
         ...stringUtils,
         ...(options as object)

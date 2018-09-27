@@ -9,6 +9,7 @@ function default_1(options) {
         options.name = parsedPath.name;
         options.path = parsedPath.path;
         const templateSource = schematics_1.apply(schematics_1.url('./files'), [
+            options.spec ? schematics_1.noop() : schematics_1.filter(path => !path.endsWith('.spec.ts')),
             schematics_1.template(Object.assign({}, utils_1.stringUtils, options)),
             schematics_1.move(parsedPath.path)
         ]);

@@ -84,3 +84,9 @@ ng g akita-schematics:service todos
 Alias:
 ng g akita-schematics:asr todos
 ```
+
+## Generate Tests
+
+Add the `--spec` option. For example:
+
+`ng g af products/products --spec`

@@ -3,8 +3,10 @@ import {
   apply,
   branchAndMerge,
   chain,
+  filter,
   mergeWith,
   move,
+  noop,
   template,
   url,
   Tree,
@@ -21,6 +23,7 @@ export default function(options: any): Rule {
     options.name = parsedPath.name;
     options.path = parsedPath.path;
     const templateSource = apply(url('./files'), [
+      options.spec ? noop() : filter(path => !path.endsWith('.spec.ts')),
       template({
         ...stringUtils,
         ...(options as object)
