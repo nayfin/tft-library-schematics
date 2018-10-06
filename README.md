@@ -90,3 +90,7 @@ ng g akita-schematics:asr todos
 Add the `--spec` option. For example:
 
 `ng g af products/products --spec`
+
+## Generate Module
+
+Add the `--withModule` to generate module and akita component. (only for entity store)

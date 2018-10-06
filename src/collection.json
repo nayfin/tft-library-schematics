@@ -43,6 +43,16 @@
       "description": "A service",
       "factory": "./service/index",
       "schema": "./service/schema.json"
+    },
+    "withModule": {
+      "description": "A module",
+      "factory": "./module/index",
+      "schema": "./module/schema.json"
+    },
+    "withComponent": {
+      "description": "A component",
+      "factory": "./component/index",
+      "schema": "./component/schema.json"
     }
   }
 }

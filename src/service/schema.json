@@ -34,6 +34,12 @@
       "default": "state",
       "description": "Specifies the name of the generated folder"
     },
+    "plain": {
+      "type": "boolean",
+      "default": false,
+      "alias": "p",
+      "description": "Specifies if a plain store is generated."
+    },
     "feature": {
       "type": "boolean",
       "default": false

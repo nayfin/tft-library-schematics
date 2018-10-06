@@ -29,10 +29,27 @@
       "alias": "p",
       "description": "Specifies if a plain store is generated."
     },
+    "module": {
+      "type": "boolean",
+      "default": false,
+      "description": "Specifies if module and component are generated."
+    },
     "dirName": {
       "type": "string",
       "default": "state",
       "description": "Specifies the name of the generated folder"
+    },
+    "styleext": {
+      "description": "The file extension to be used for style files.",
+      "type": "string",
+      "default": "scss"
+    },
+    "project": {
+      "type": "string",
+      "description": "The name of the project.",
+      "$default": {
+        "$source": "projectName"
+      }
     }
   },
   "required": []
