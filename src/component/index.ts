@@ -27,8 +27,6 @@ function buildSelector(options: any, projectPrefix: string) {
 
 export default function(options: any): Rule {
   return (host: Tree, context: SchematicContext) => {
-    console.log(options.project);
-
     const project = getProject(host, options.project);
 
     options.path = getProjectPath(host, options);

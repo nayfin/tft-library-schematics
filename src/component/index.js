@@ -15,7 +15,6 @@ function buildSelector(options, projectPrefix) {
 }
 function default_1(options) {
     return (host, context) => {
-        console.log(options.project);
         const project = utils_1.getProject(host, options.project);
         options.path = utils_1.getProjectPath(host, options);
         const parsedPath = utils_1.parseName(options);

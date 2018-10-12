@@ -1,6 +1,6 @@
 {
   "name": "akita-schematics",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Akita Schematics for Angular",
   "scripts": {
     "build": "tsc -p tsconfig.json",
