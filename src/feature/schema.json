@@ -50,6 +50,9 @@
       "$default": {
         "$source": "projectName"
       }
+    },
+    "withModule": {
+      "type": "boolean"
     }
   },
   "required": []
