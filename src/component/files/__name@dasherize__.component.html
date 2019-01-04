@@ -1,3 +1,4 @@
+<% if (entity) { %>
 <ng-template #loading>Loading...</ng-template>
 
 <ul *ngIf="!(isLoading$ | async); else loading">
@@ -5,3 +6,4 @@
     ...
   </li>
 </ul>
+<% } %>

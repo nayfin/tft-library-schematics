@@ -5,7 +5,7 @@ function default_1(options) {
     const plain = options.plain;
     const withModule = options.withModule;
     let files = [
-        schematics_1.schematic(plain ? "store" : "entity-store", {
+        schematics_1.schematic(plain ? 'store' : 'entity-store', {
             flat: options.flat,
             name: options.name,
             path: options.path,
@@ -14,7 +14,7 @@ function default_1(options) {
             feature: true,
             spec: options.spec
         }),
-        schematics_1.schematic(plain ? "query" : "entity-query", {
+        schematics_1.schematic(plain ? 'query' : 'entity-query', {
             flat: options.flat,
             name: options.name,
             path: options.path,
@@ -23,7 +23,7 @@ function default_1(options) {
             dirName: options.dirName,
             feature: true
         }),
-        schematics_1.schematic("service", {
+        schematics_1.schematic('service', {
             flat: options.flat,
             module: options.module,
             name: options.name,
@@ -37,7 +37,7 @@ function default_1(options) {
     ];
     if (!plain) {
         files = files.concat([
-            schematics_1.schematic("model", {
+            schematics_1.schematic('model', {
                 flat: options.flat,
                 module: options.module,
                 name: options.name,
@@ -51,7 +51,7 @@ function default_1(options) {
     }
     if (withModule) {
         files = files.concat([
-            schematics_1.schematic("withModule", {
+            schematics_1.schematic('withModule', {
                 flat: options.flat,
                 module: options.module,
                 name: options.name,
@@ -61,7 +61,7 @@ function default_1(options) {
                 dirName: options.dirName,
                 feature: true
             }),
-            schematics_1.schematic("withComponent", {
+            schematics_1.schematic('withComponent', {
                 flat: options.flat,
                 module: options.module,
                 name: options.name,
@@ -70,6 +70,7 @@ function default_1(options) {
                 spec: options.spec,
                 dirName: options.dirName,
                 styleext: options.styleext,
+                entity: !options.plain,
                 feature: true
             })
         ]);
