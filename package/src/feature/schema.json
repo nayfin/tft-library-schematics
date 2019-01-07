@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "SchematicsAkitaFeature",
-  "title": "Akita Feature Options Schema",
+  "id": "SchematicsTftLibraryFeature",
+  "title": "TftLibrary Feature Options Schema",
   "type": "object",
   "properties": {
     "path": {

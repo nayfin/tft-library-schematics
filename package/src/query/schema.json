@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "SchematicsAkitaQuery",
-  "title": "Akita Query Options Schema",
+  "id": "SchematicsTftLibraryQuery",
+  "title": "TftLibrary Query Options Schema",
   "type": "object",
   "properties": {
     "name": {

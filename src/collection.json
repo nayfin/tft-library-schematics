@@ -50,9 +50,15 @@
       "schema": "./module/schema.json"
     },
     "withComponent": {
+      "aliases": ["cml"],
       "description": "A component",
       "factory": "./component/index",
       "schema": "./component/schema.json"
+    },
+    "list": {
+      "description": "A list design to facilitate content management",
+      "factory": "./list/index",
+      "schema": "./list/schema.json"
     }
   }
 }

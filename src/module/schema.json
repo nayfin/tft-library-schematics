@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "SchematicsAkitaModule",
-  "title": "Akita Module Options Schema",
+  "id": "SchematicsTftLibraryModule",
+  "title": "TftLibrary Module Options Schema",
   "type": "object",
   "properties": {
     "name": {

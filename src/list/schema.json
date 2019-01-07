@@ -1,7 +1,7 @@
 {
   "$schema": "http://json-schema.org/schema",
-  "id": "SchematicsTftLibraryComponent",
-  "title": "TftLibrary Component Options Schema",
+  "id": "SchematicsTftLibraryList",
+  "title": "TftLibrary List Schema",
   "type": "object",
   "properties": {
     "path": {

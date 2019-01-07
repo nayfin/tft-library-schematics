@@ -8,7 +8,7 @@ export interface <%= classify(name) %>State extends EntityState<<%= singular(cla
 @StoreConfig({ name: '<%= name %>' })
 export class <%= classify(name) %>Store extends EntityStore<<%= classify(name) %>State, <%= singular(classify(name)) %>> {
 
-  constructor() {
+  constructor( ) {
     super();
   }
 

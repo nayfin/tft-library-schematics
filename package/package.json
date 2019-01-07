@@ -1,7 +1,7 @@
 {
-  "name": "akita-schematics",
+  "name": "tft-library-schematics",
   "version": "1.0.0-rc.1",
-  "description": "Akita Schematics for Angular",
+  "description": "TftLibrary Schematics for Angular",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && jasmine **/*_spec.js"
@@ -10,14 +10,14 @@
     "RxJS",
     "Angular",
     "Redux",
-    "Akita",
+    "TftLibrary",
     "Schematics",
     "Angular CLI"
   ],
   "author": "Netanel Basal <netanel7799@gmail.com>",
   "license": "Apache License 2.0",
   "schematics": "./src/collection.json",
-  "homepage": "https://github.com/@datorama/akita/schematics#readme",
+  "homepage": "https://github.com/@datorama//schematics#readme",
   "dependencies": {
     "@angular-devkit/architect": "0.7.2",
     "@angular-devkit/core": "0.7.2",

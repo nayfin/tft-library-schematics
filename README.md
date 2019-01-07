@@ -1,35 +1,34 @@
-# Akita Schematics
+# TftLibrary Schematics
 
-Scaffolding library for Angular applications using Akita.
-
-akita-schematics provides CLI commands for generating files when building new features with Akita. Built on top of [`Schematics`](https://blog.angular.io/schematics-an-introduction-dc1dfbc2a2b2), this tool integrates with the [`Angular CLI`](https://cli.angular.io/).
+Scaffolding library for Angular applications using TftLibrary. Expands on the akita-schematics by @datorama, to include connecting the feature store to a Firestore Collection.
+tft-library-schematics provides CLI commands for generating files when building new features with TftLibrary. Built on top of [`Schematics`](https://blog.angular.io/schematics-an-introduction-dc1dfbc2a2b2), this tool integrates with the [`Angular CLI`](https://cli.angular.io/).
 
 ### Installation
 
-Install akita-schematics from npm:
+Install tft-library-schematics from npm:
 
-`npm install akita-schematics --save-dev`
+`npm install tft-library-schematics --save-dev`
 
 ##### OR
 
-`yarn add akita-schematics --dev`
+`yarn add tft-library-schematics --dev`
 
 ## Default Schematics Collection
 
-To use `akita-schematics` as the default collection in your Angular CLI project,
+To use `tft-library-schematics` as the default collection in your Angular CLI project,
 add it to your `angular.json`:
 
 ```sh
-ng config cli.defaultCollection akita-schematics
+ng config cli.defaultCollection tft-library-schematics
 ```
 
-The [collection schema](https://github.com/datorama/akita-schematics/blob/master/src/collection.json) also has aliases to the most common schematics used to generate files.
+The [collection schema](https://github.com/datorama/tft-library-schematics/blob/master/src/collection.json) also has aliases to the most common schematics used to generate files.
 
-The `akita-schematics` extend the default `@schematics/angular` collection. If you want to set defaults for schematics such as generating components with scss file, you must change the schematics package name from `@schematics/angular` to `akita-schematics` in `angular.json`:
+The `tft-library-schematics` extend the default `@schematics/angular` collection. If you want to set defaults for schematics such as generating components with scss file, you must change the schematics package name from `@schematics/angular` to `tft-library-schematics` in `angular.json`:
 
 ```json
 "schematics": {
-  "akita-schematics:component": {
+  "tft-library-schematics:component": {
     "styleext": "scss"
   }
 }
@@ -38,51 +37,51 @@ The `akita-schematics` extend the default `@schematics/angular` collection. If y
 ## Create a New Feature
 
 ```sh
-ng g akita-schematics:feature todos/todos
+ng g tft-library-schematics:feature todos/todos
 ```
 
 The defauls feature will output an entity feature, but you can also generate the normal:
 
 ```sh
-ng g akita-schematics:feature todos/todos --plain
+ng g tft-library-schematics:feature todos/todos --plain
 ```
 
-> Note that the `akita-schematics:` prefix is only needed when the default collection isn't set to `akita-schematics`
+> Note that the `tft-library-schematics:` prefix is only needed when the default collection isn't set to `tft-library-schematics`
 
 ## Generate a Store
 
 ```sh
-ng g akita-schematics:as todos
-ng g akita-schematics:aes todos // entity store
+ng g tft-library-schematics:as todos
+ng g tft-library-schematics:aes todos // entity store
 ```
 
 ## Generate a Query
 
 ```sh
-ng g akita-schematics:query todos
-ng g akita-schematics:entity-query todos
+ng g tft-library-schematics:query todos
+ng g tft-library-schematics:entity-query todos
 
 Alias:
-ng g akita-schematics:aq todos
-ng g akita-schematics:aeq todos // entity query
+ng g tft-library-schematics:aq todos
+ng g tft-library-schematics:aeq todos // entity query
 ```
 
 ## Generate a Model
 
 ```sh
-ng g akita-schematics:model todo
+ng g tft-library-schematics:model todo
 
 Alias:
-ng g akita-schematics:am todo
+ng g tft-library-schematics:am todo
 ```
 
 ## Generate a Service
 
 ```sh
-ng g akita-schematics:service todos
+ng g tft-library-schematics:service todos
 
 Alias:
-ng g akita-schematics:asr todos
+ng g tft-library-schematics:asr todos
 ```
 
 ## Generate Tests
@@ -93,4 +92,10 @@ Add the `--spec` option. For example:
 
 ## Generate Module
 
-Add the `--withModule` to generate module and akita component. (only for entity store)
+Add the `--withModule` to generate module and with component. (only for entity store)
+
+## TODO
+
+- finish `g feature` i.e. store, query, model
+- chain to `angularfire-schematic`
+- connect to Firestore in app.module
