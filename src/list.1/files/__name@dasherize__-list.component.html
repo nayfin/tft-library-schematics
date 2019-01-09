@@ -1,18 +1,9 @@
-<% if (entity) { %>
 <ng-template #loading>Loading...</ng-template>
-
-<ul *ngIf="!(isLoading$ | async); else loading">
-  <li *ngFor="let <%= singular(camelize(name)) %> of (<%= camelize(name) %>$ | async)">
-    ...
-  </li>
-</ul>
-
-
 
 <h2 class="mat-h2"> <%= singular(camelize(name)) %> List </h2>
 <div class="mat-elevation-z8 <%= dasherize(name) %>-list">
-  <table mat-table [dataSource]="<%= singular(camelize(name)) %>$ | async">
-    <ng-container matColumnDef="name">
+  <table mat-table [dataSource]="<%= camelize(name) %>$ | async">
+    <ng-container matColumnDef="id">
       <th mat-header-cell *matHeaderCellDef> ID </th>
       <td mat-cell *matCellDef="let <%= singular(camelize(name)) %>"> {{<%= singular(camelize(name)) %>.id}} </td>
     </ng-container>
@@ -33,7 +24,7 @@
         </button>
         <button
           mat-icon-button
-          (click)="delete(<%= singular(camelize(name)) %>.id)"
+          (click)="remove(<%= singular(camelize(name)) %>.id)"
           matTooltip="Delete">
           <mat-icon>delete</mat-icon>
         </button>
@@ -50,5 +41,3 @@
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
 </div>
-
-<% } %>
