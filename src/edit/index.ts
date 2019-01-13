@@ -12,7 +12,7 @@ import {
 } from "@angular-devkit/schematics";
 
 import { getProjectPath, stringUtils, parseName, getProject } from "../utils";
-import { dasherize } from "../utils/string";
+import { dasherize, singular } from "../utils/string";
 
 function buildSelector(options: any, projectPrefix: string) {
 
@@ -39,7 +39,7 @@ export default function(options: any): Rule {
       // - generating a feature with --withContentManagement
       // - generating the list
       // needs a function
-      `containers/${parsedPath.name}-list`
+      `containers/${singular(parsedPath.name)}-edit`
     );
 
     options.name = parsedPath.name;

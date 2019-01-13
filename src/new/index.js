@@ -23,7 +23,7 @@ function default_1(options) {
         // - generating a feature with --withContentManagement
         // - generating the list
         // needs a function
-        `containers/${parsedPath.name}-list`);
+        `containers/${string_1.singular(parsedPath.name)}-new`);
         options.name = parsedPath.name;
         options.path = parsedPath.path;
         options.selector = options.selector || buildSelector(options, project.prefix);

@@ -40,4 +40,9 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
   </table>
+  <mat-card>
+    <button mat-raised-button (click)="add<%= singular(camelize(name)) %>()">
+      ADD <%= singular(classify(name)) %>
+    </button>
+  </mat-card>
 </div>

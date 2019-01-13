@@ -59,6 +59,31 @@
       "description": "A list design to facilitate content management",
       "factory": "./list/index",
       "schema": "./list/schema.json"
+    },
+    "new": {
+      "description": "A new item form designed to reduce content management boilerplate",
+      "factory": "./new/index",
+      "schema": "./new/schema.json"
+    },
+    "edit": {
+      "description": "A edit item form designed to reduce content management boilerplate",
+      "factory": "./edit/index",
+      "schema": "./edit/schema.json"
+    },
+    "copy": {
+      "description": "A copy item form designed to reduce content management boilerplate",
+      "factory": "./copy/index",
+      "schema": "./copy/schema.json"
+    },
+    "form": {
+      "description": "A dumb form designed to take an initial form value and emit the form on submission",
+      "factory": "./form/index",
+      "schema": "./form/schema.json"
+    },
+    "state-barrel": {
+      "description": "A barrel for exporting the state",
+      "factory": "./state-barrel/index",
+      "schema": "./state-barrel/schema.json"
     }
   }
 }

@@ -12,10 +12,9 @@ import {
 } from "@angular-devkit/schematics";
 
 import { getProjectPath, stringUtils, parseName, getProject } from "../utils";
-import { dasherize } from "../utils/string";
+import { dasherize, singular } from "../utils/string";
 
 function buildSelector(options: any, projectPrefix: string) {
-  console.log({options});
 
   let selector = dasherize(options.name);
   if (options.prefix) {
@@ -36,13 +35,16 @@ export default function(options: any): Rule {
 
     (parsedPath as any).path = parsedPath.path.replace(
       `${options.dirName}`,
-      `${parsedPath.name}/`
+      // TODO: the path to respond to the circumstances calling it
+      // - generating a feature with --withContentManagement
+      // - generating the list
+      // needs a function
+      `containers/${singular(parsedPath.name)}-new`
     );
 
     options.name = parsedPath.name;
     options.path = parsedPath.path;
-    options.selector =
-      options.selector || buildSelector(options, project.prefix);
+    options.selector = options.selector || buildSelector(options, project.prefix);
 
     const templateSource = apply(url("./files"), [
       template({

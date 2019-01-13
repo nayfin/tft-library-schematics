@@ -53,6 +53,10 @@
     },
     "withModule": {
       "type": "boolean"
+    },
+    "withContentManagement": {
+      "type": "boolean",
+      "default": true
     }
   },
   "required": []

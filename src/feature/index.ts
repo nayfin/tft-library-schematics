@@ -7,9 +7,10 @@ import {
 } from '@angular-devkit/schematics';
 
 export default function(options: any): Rule {
-  const plain = options.plain;
-  const withModule = options.withModule;
-
+  // const plain = options.plain;
+  // const withModule = options.withModule;
+  // const withContentManagement = options.withContentManagement;
+  const {plain, withModule, withContentManagement } = options;
   let files = [
     schematic(plain ? 'store' : 'entity-store', {
       flat: options.flat,
@@ -39,6 +40,16 @@ export default function(options: any): Rule {
       plain,
       dirName: options.dirName,
       feature: true
+    }),
+    schematic('state-barrel', {
+      // flat: options.flat,
+      module: options.module,
+      name: options.name,
+      path: options.path,
+      project: options.project,
+      // spec: options.spec,
+      dirName: options.dirName,
+      feature: true
     })
   ];
 
@@ -57,7 +68,7 @@ export default function(options: any): Rule {
     ]);
   }
 
-  if (withModule) {
+  if (withModule || withContentManagement) {
     files = files.concat([
       schematic('withModule', {
         flat: options.flat,
@@ -70,7 +81,64 @@ export default function(options: any): Rule {
         feature: true
       }),
 
-      schematic('withComponent', {
+    ]);
+  }
+  if (withContentManagement) {
+    files = files.concat([
+
+      schematic('list', {
+        flat: options.flat,
+        module: options.module,
+        name: options.name,
+        path: options.path,
+        project: options.project,
+        spec: options.spec,
+        dirName: options.dirName,
+        styleext: options.styleext,
+        entity: !options.plain,
+        feature: true
+      }),
+
+      schematic('form', {
+        flat: options.flat,
+        module: options.module,
+        name: options.name,
+        path: options.path,
+        project: options.project,
+        spec: options.spec,
+        dirName: options.dirName,
+        styleext: options.styleext,
+        entity: !options.plain,
+        feature: true
+      }),
+
+      schematic('new', {
+        flat: options.flat,
+        module: options.module,
+        name: options.name,
+        path: options.path,
+        project: options.project,
+        spec: options.spec,
+        dirName: options.dirName,
+        styleext: options.styleext,
+        entity: !options.plain,
+        feature: true
+      }),
+
+      schematic('edit', {
+        flat: options.flat,
+        module: options.module,
+        name: options.name,
+        path: options.path,
+        project: options.project,
+        spec: options.spec,
+        dirName: options.dirName,
+        styleext: options.styleext,
+        entity: !options.plain,
+        feature: true
+      }),
+
+      schematic('copy', {
         flat: options.flat,
         module: options.module,
         name: options.name,

@@ -4,7 +4,6 @@ const schematics_1 = require("@angular-devkit/schematics");
 const utils_1 = require("../utils");
 const string_1 = require("../utils/string");
 function buildSelector(options, projectPrefix) {
-    console.log({ options });
     let selector = string_1.dasherize(options.name);
     if (options.prefix) {
         selector = `${options.prefix}-${selector}`;
@@ -19,7 +18,7 @@ function default_1(options) {
         const project = utils_1.getProject(host, options.project);
         options.path = utils_1.getProjectPath(host, options);
         const parsedPath = utils_1.parseName(options);
-        parsedPath.path = parsedPath.path.replace(`${options.dirName}`, `${parsedPath.name}/`);
+        parsedPath.path = parsedPath.path.replace(`${options.dirName}`, `components/${string_1.singular(parsedPath.name)}-form/`);
         options.name = parsedPath.name;
         options.path = parsedPath.path;
         options.selector =

@@ -1,7 +1,6 @@
-import { ID } from '@datorama/akita';
 
 export interface <%= singular(classify(name)) %> {
-  id: ID;
+  id: string;
   // TODO: delete this after done testing
   name: string;
   value: string;
