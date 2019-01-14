@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
 import { TestsQuery, TestsService } from './tests/state';
-
+import { akitaDevtools } from '@datorama/akita/src/enhancers/devtools';
+import { environment } from '../environments/environment';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -9,12 +10,9 @@ import { TestsQuery, TestsService } from './tests/state';
 export class AppComponent {
   title = 'the test bed';
   // tests$ = this.testsQuery.tests$;
-  constructor(
-    // private testsQuery: TestsQuery,
-    // private testsService: TestsService,
-    ) { }
-
-  addTest() {
-    // this.testsService.add({name: 'testing first add', value: 'some value'});
+  constructor(private ngZone: NgZone) {
+    if (!environment.production) {
+      akitaDevtools(ngZone);
+    }
   }
 }
