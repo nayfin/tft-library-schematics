@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'tests', loadChildren: './tests/tests.module#TestsModule'},
+  // { path: 'tests', loadChildren: './tests/tests.module#TestsModule'},
 ];
 
 @NgModule({
